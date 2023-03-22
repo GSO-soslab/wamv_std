@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+    This file is part of ALPHA AUV project.
+
+    Author: Emir Cem Gezer
+    Email: emircem@uri.edu;emircem.gezer@gmail.com
+    Year: 2022
+
+    Copyright (C) 2022 Smart Ocean Systems Laboratory
+-->
+<launch>
+
+    <arg name="robot_name" default="wamv"/>
+
+    <!--
+        List of the simulated worlds in the 'alpha_std_stonefish'
+    -->
+    <arg name="scenario" default="ocean"/>
+
+    <include file="$(find wamv_stonefish)/launch/simulation.launch">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+        <arg name="scenario" value="$(arg scenario)"/>
+    </include>
+
+    <!-- load urdf vehicle description -->
+    <include file="$(find wamv_bringup)/launch/include/description.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include>
+
+</launch>

@@ -12,7 +12,7 @@
 
     <xacro:arg name="robot_name" default="changeme"/>
 
-    <xacro:include filename="$(find alpha_std_stonefish)/description/alpha_std.scn.xacro"/>
+    <xacro:include filename="$(find wamv_stonefish)/description/wamv.scn.xacro"/>
 
     <xacro:alpha_sci robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 

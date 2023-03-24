@@ -63,6 +63,34 @@
                     <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
                     <cg xyz=" 0.0 0 1.0" rpy="0.0 0.0 0.0"/>
                 </external_part>
+
+                <external_part name="thrusterPort" type="model" physics="submerged" buoyant="false">
+                    <physical>
+                        <mesh filename="propeller.obj" scale="0.5"/>
+                        <origin rpy="0.0 0 0.0" xyz="-1.1 -.45 0.08"/>
+                    </physical>
+                    <visual>
+                        <mesh filename="propeller.obj" scale="0.5"/>
+                        <origin rpy="0.0 0 0.0" xyz="-1.1 -.45 0.08"/>
+                    </visual>
+                    <material name="Neutral"/>
+                    <look name="black"/>
+                    <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </external_part>
+
+                <external_part name="thrusterStarboard" type="model" physics="submerged" buoyant="false">
+                    <physical>
+                        <mesh filename="propeller.obj" scale="0.5"/>
+                        <origin rpy="0.0 0 0.0" xyz="-1.1 .45 0.08"/>
+                    </physical>
+                    <visual>
+                        <mesh filename="propeller.obj" scale="0.5"/>
+                        <origin rpy="0.0 0 0.0" xyz="-1.1 .45 0.08"/>
+                    </visual>
+                    <material name="Neutral"/>
+                    <look name="black"/>
+                    <compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+                </external_part>
             </base_link>
 
             <!-- the actual base frame  -->
@@ -79,6 +107,30 @@
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <axis xyz="1.0 0.0 0.0"/>
             </joint>
+
+            <actuator name="ThrusterPort" type="thruster">
+                <link name="Base"/>
+                <origin rpy="0.0 0.0 0" xyz="-1.1 -.45 0.08"/>
+                <specs thrust_coeff="0.4315" thrust_coeff_backward="0.3404" torque_coeff="0.01" max_rpm="3000.0"/>
+                <propeller diameter="0.08" right="true">
+                    <mesh filename="propeller.obj" scale="0.5"/>
+                    <material name="Neutral"/>
+                    <look name="white"/>
+                </propeller>
+                <ros_subscriber topic="/${robot_name}/control/thruster/port"/>
+            </actuator>
+
+            <actuator name="ThrusterStarboard" type="thruster">
+                <link name="Base"/>
+                <origin rpy="0.0 0.0 0" xyz="-1.1 .45 0.08"/>
+                <specs thrust_coeff="0.4315" thrust_coeff_backward="0.3404" torque_coeff="0.01" max_rpm="3000.0"/>
+                <propeller diameter="0.08" right="true">
+                    <mesh filename="propeller.obj" scale="0.5"/>
+                    <material name="Neutral"/>
+                    <look name="white"/>
+                </propeller>
+                <ros_subscriber topic="/${robot_name}/control/thruster/starboard"/>
+            </actuator>
 
             <world_transform rpy="${rpy}" xyz="${xyz}"/>
 

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+    This file is part of ALPHA AUV project.
+    Author: Tony Jacob
+    Email: tony.jacob@uri.edu
+    Year: 2023
+    Copyright (C) 2022 Smart Ocean Systems Laboratory
+-->
+<scenario xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find wamv_stonefish)/description/looks.scn.xacro"/>
+    <xacro:include filename="$(find wamv_stonefish)/description/materials.scn.xacro"/>
+    <xacro:include filename="$(find wamv_stonefish)/scenarios/ocean.scn.xacro"/>
+
+    <dynamic name="iceberg" type="model">
+        <physical>
+            <mesh filename="iceberg_01.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <visual>
+            <mesh filename="iceberg_01.obj" scale="1.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <material name="Ice"/>
+        <look name="ice"/>
+        <!-- <mass value="500"/> -->
+        <world_transform xyz="100.0 100.0 0.0" rpy="3.1415926 0.0 0.0"/>
+    </dynamic>
+
+</scenario>

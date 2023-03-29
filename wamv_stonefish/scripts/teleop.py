@@ -16,8 +16,8 @@ class Move:
         t = Twist()
         lin_x = msg.axes[1]
         ang_z = msg.axes[2]
-        t.linear.x = lin_x
-        t.angular.z = ang_z
+        t.linear.x = lin_x * 10
+        t.angular.z = ang_z * 10
         self.pub_joy_cmd_vel.publish(t)
 
     def propel(self, msg):

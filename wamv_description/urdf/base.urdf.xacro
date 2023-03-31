@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="alpha_std" xmlns:xacro="http://ros.org/wiki/xacro">
 
-
+    <!--This operates in std frame-->
     <link name="base_link">
         <visual>
             <origin xyz="0.0 -0 -0" rpy="0.0 0.0 0"/>
@@ -20,7 +20,7 @@
    
     <link name="Multibeam"/>
     <joint name="Multibeam_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 1.57"/>
+        <origin xyz="0.0 0.0 -0.1" rpy="-1.57 .785 0"/>
         <parent link="base_link"/>
         <child link="Multibeam"/>
     </joint>

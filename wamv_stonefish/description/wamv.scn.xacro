@@ -5,6 +5,7 @@
     Email: tony.jacob@uri.edu
     Year: 2023
     Copyright (C) 2022 Smart Ocean Systems Laboratory
+    This file operates in NED Frame
 -->
 <scenario xmlns:xacro="http://ros.org/wiki/xacro">
 
@@ -133,11 +134,11 @@
             </actuator>
 
             <sensor name="Multibeam" rate="10" type="multibeam">
-                <specs fov="120.0" steps="128"/>
-                <range distance_min="0.5" distance_max="50.0"/>
+                <specs fov="90.0" steps="256"/>
+                <range distance_min="0.5" distance_max="100.0"/>
                 <noise distance="0.1"/>
                 <history samples="1"/>
-                <origin xyz="0.0 0.0 .1" rpy="1.57 0.0 1.57"/>
+                <origin xyz="0.0 0.0 .1" rpy="1.57 -.785 1.57"/>
                 <link name="Vehicle"/>
                 <ros_publisher topic="/${robot_name}/multibeam_sonar/stonefish/data"/>
             </sensor>

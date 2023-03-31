@@ -87,7 +87,7 @@ Visualization Manager:
       Length: 1
       Name: Axes
       Radius: 0.10000000149011612
-      Reference Frame: wamv/Multibeam
+      Reference Frame: <Fixed Frame>
       Show Trail: false
       Value: true
   Enabled: true
@@ -118,7 +118,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 186.38107299804688
+      Distance: 18.519515991210938
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -134,9 +134,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.12539812922477722
+      Pitch: 0.1853981763124466
       Target Frame: <Fixed Frame>
-      Yaw: 5.198575973510742
+      Yaw: 3.1985740661621094
     Saved: ~
 Window Geometry:
   Displays:
@@ -154,5 +154,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1440
-  X: 2006
-  Y: 178
+  X: 286
+  Y: 106

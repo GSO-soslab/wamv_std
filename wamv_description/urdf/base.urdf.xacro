@@ -18,10 +18,24 @@
         <child link="cg_link"/>
     </joint>
    
-    <link name="Multibeam"/>
-    <joint name="Multibeam_joint" type="fixed">
-        <origin xyz="0.0 0.0 -0.1" rpy="-1.57 .785 0"/>
+    <link name="multibeam"/>
+    <joint name="multibeam_joint" type="fixed">
+        <origin xyz="0.0 0.0 -0.1" rpy="-1.57 .785 -1.57"/>
         <parent link="base_link"/>
-        <child link="Multibeam"/>
+        <child link="multibeam"/>
+    </joint>
+
+    <link name="imu_sf"/>
+    <joint name="imu__sf_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="imu_sf"/>
+    </joint>
+    
+    <link name="gps"/>
+    <joint name="gps_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.28" rpy="3.1415926 0.0 -1.5707963"/>
+        <parent link="base_link"/>
+        <child link="gps"/>
     </joint>
 </robot>

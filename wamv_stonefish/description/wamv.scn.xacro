@@ -133,14 +133,28 @@
                 <ros_subscriber topic="/${robot_name}/control/thruster/starboard"/>
             </actuator>
 
-            <sensor name="Multibeam" rate="10" type="multibeam">
+            <sensor name="multibeam" rate="10" type="multibeam">
                 <specs fov="90.0" steps="256"/>
                 <range distance_min="0.5" distance_max="100.0"/>
                 <noise distance="0.1"/>
                 <history samples="1"/>
                 <origin xyz="0.0 0.0 .1" rpy="1.57 -.785 1.57"/>
-                <link name="Vehicle"/>
+                <link name="Base"/>
                 <ros_publisher topic="/${robot_name}/multibeam_sonar/stonefish/data"/>
+            </sensor>
+
+            <sensor name="imu_sf" type="imu" rate="20.0">
+                <link name="Base"/>
+                <origin rpy="3.1415926 0.0 0.0" xyz="0 0.0 -0.05"/>
+                <noise angle="0.01 0.01 0.05" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/>
+                <ros_publisher topic="/${robot_name}/imu/stonefish/data"/>
+            </sensor>
+
+            <sensor name="gps" type="gps" rate="1.0">
+                <link name="Base"/>
+                <origin rpy="0.0 0.0 0.0" xyz="-0.7 0.0 -0.3"/>
+                <noise ned_position="0.1"/>
+                <ros_publisher topic="/${robot_name}/gps/fix"/>
             </sensor>
 
             <world_transform rpy="${rpy}" xyz="${xyz}"/>

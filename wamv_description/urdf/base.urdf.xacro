@@ -25,11 +25,11 @@
         <child link="multibeam"/>
     </joint>
 
-    <link name="imu_sf"/>
+    <link name="imu"/>
     <joint name="imu__sf_joint" type="fixed">
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
-        <child link="imu_sf"/>
+        <child link="imu"/>
     </joint>
     
     <link name="gps"/>

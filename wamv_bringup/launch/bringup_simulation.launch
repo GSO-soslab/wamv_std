@@ -26,6 +26,12 @@
     <include file="$(find wamv_bringup)/launch/include/description.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
+
+    <!-- load localization setup -->
+    <include file="$(find wamv_bringup)/launch/include/localization.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+        <arg name="is_sim" value="true"/>
+    </include>
     
     <!-- load preconfigured rviz -->
     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find wamv_bringup)/rviz/config.rviz" />

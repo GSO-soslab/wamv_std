@@ -26,7 +26,8 @@
     <include file="$(find wamv_bringup)/launch/include/description.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
-
+    
+    <!-- load preconfigured rviz -->
     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find wamv_bringup)/rviz/config.rviz" />
 
     <node type="joy_node" name="joy_node" pkg="joy"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="alpha_std" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="wamv" xmlns:xacro="http://ros.org/wiki/xacro">
 
     <!--This operates in std frame-->
     <link name="base_link">

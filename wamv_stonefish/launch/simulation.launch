@@ -40,7 +40,7 @@
 
     </node>
 
-    <node name="Teleop_to_Thrust"
+    <node name="teleop_to_thrust"
             pkg ="wamv_stonefish"
             type="teleop.py"
             output="screen"/>

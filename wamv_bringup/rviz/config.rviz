@@ -8,6 +8,9 @@ Panels:
         - /Status1
         - /LaserScan1
         - /Axes1
+        - /RobotModel1
+        - /RobotModel1/Status1
+        - /RobotModel1/Links1
       Splitter Ratio: 0.5
     Tree Height: 476
   - Class: rviz/Selection
@@ -90,6 +93,43 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Show Trail: false
       Value: true
+    - Alpha: 0.5
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        cg_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        gps:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        imu_sf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        multibeam:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: wamv/robot_description
+      TF Prefix: wamv
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -118,7 +158,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 18.519515991210938
+      Distance: 8.045586585998535
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -134,9 +174,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.1853981763124466
+      Pitch: 1.010398030281067
       Target Frame: <Fixed Frame>
-      Yaw: 3.1985740661621094
+      Yaw: 3.2435765266418457
     Saved: ~
 Window Geometry:
   Displays:
@@ -155,4 +195,4 @@ Window Geometry:
     collapsed: false
   Width: 1440
   X: 286
-  Y: 106
+  Y: 69

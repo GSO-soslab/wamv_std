@@ -13,7 +13,7 @@ use_odometry_yaw: true
 
 # use_local_cartesian: true
 
-# zero_altitude: true
+zero_altitude: true
 
 
 ## If you want to set a datum uncomment the following

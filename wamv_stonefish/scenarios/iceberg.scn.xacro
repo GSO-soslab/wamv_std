@@ -12,7 +12,7 @@
     <xacro:include filename="$(find wamv_stonefish)/description/materials.scn.xacro"/>
     <xacro:include filename="$(find wamv_stonefish)/scenarios/ocean.scn.xacro"/>
 
-    <!-- <static name="iceberg" type="model">
+    <static name="iceberg" type="model">
         <physical>
             <mesh filename="iceberg_01.obj" scale="1.0" convex="false"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -25,9 +25,9 @@
         <look name="ice"/>
         <cg xyz=" 0.0 0 0.0" rpy="0.0 0.0 0.0"/>
         <world_transform xyz="100.0 100.0 0.0" rpy="3.1415926 0.0 0.0"/>
-    </static> -->
+    </static>
 
-    <animated name="AnimMesh" type="model" collisions="true">
+    <!-- <animated name="AnimMesh" type="model" collisions="true">
         <physical>
             <mesh filename="iceberg_01.obj" scale="0.5" convex="false"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -44,6 +44,6 @@
             <keypoint time="10.0" xyz="10.0 60.0 0.0" rpy="3.1415926 0.0 0"/>
             <keypoint time="40.0" xyz="10.0 60.0 0.0" rpy="3.1415926 0.0 0.0"/>
         </trajectory>
-    </animated>
+    </animated> -->
 
 </scenario>

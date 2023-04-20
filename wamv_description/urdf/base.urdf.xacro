@@ -25,6 +25,20 @@
         <child link="multibeam"/>
     </joint>
 
+    <!-- <link name="laserscanner_1"/>
+    <joint name="laserscanner_1_joint" type="fixed">
+        <origin xyz="0.0 0.0 1" rpy="-0 0 0"/>
+        <parent link="base_link"/>
+        <child link="laserscanner_1"/>
+    </joint> -->
+
+    <link name="laserscanner_2"/>
+    <joint name="laserscanner_2_joint" type="fixed">
+        <origin xyz="0.0 0.0 5" rpy="0 0 4.712389"/>
+        <parent link="base_link"/>
+        <child link="laserscanner_2"/>
+    </joint>
+
     <link name="imu"/>
     <joint name="imu__sf_joint" type="fixed">
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>

@@ -143,17 +143,42 @@
                 <ros_publisher topic="/${robot_name}/multibeam_sonar/stonefish/data"/>
             </sensor>
 
+            <!-- <sensor name="laserscanner_1" rate="10" type="multibeam">
+                <specs fov="45" steps="128"/>
+                <range distance_min="0.5" distance_max="100.0"/>
+                <noise distance="0.1"/>
+                <history samples="1"/>
+                <origin xyz="0.0 0.0 -1" rpy="0 0 1.57"/>
+                <link name="Base"/>
+                <ros_publisher topic="/${robot_name}/laserscanner_1/stonefish/data"/>
+            </sensor> -->
+
+            <sensor name="laserscanner_2" rate="10" type="multibeam">
+                <specs fov="45" steps="128"/>
+                <range distance_min="0.5" distance_max="100.0"/>
+                <!-- <noise distance="0.1"/> -->
+                <noise distance="0.0"/>
+                <history samples="1"/>
+                <origin xyz="0.0 0.0 -5" rpy="3.14 0 -4.712389"/>
+                <link name="Base"/>
+                <ros_publisher topic="/${robot_name}/laserscanner_2/stonefish/data"/>
+            </sensor>
+
             <sensor name="imu" type="imu" rate="20.0">
                 <link name="Base"/>
                 <origin rpy="3.1415926 0.0 0.0" xyz="0 0.0 -0.05"/>
-                <noise angle="0.01 0.01 0.05" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/>
+                <!-- <noise angle="0.01 0.01 0.05" angular_velocity="0.05" yaw_drift="0.001" linear_acceleration="0.1"/> -->
+                <noise angle="0.0 0.0 0.0" angular_velocity="0.0" yaw_drift="0.00" linear_acceleration="0.0"/>
+                
                 <ros_publisher topic="/${robot_name}/imu/stonefish/data"/>
             </sensor>
 
             <sensor name="gps" type="gps" rate="1.0">
                 <link name="Base"/>
                 <origin rpy="0.0 0.0 0.0" xyz="-0.7 0.0 -0.3"/>
-                <noise ned_position="0.1"/>
+                <!-- <noise ned_position="0.1"/> -->
+                
+                <noise ned_position="0.0"/>
                 <ros_publisher topic="/${robot_name}/gps/fix"/>
             </sensor>
 

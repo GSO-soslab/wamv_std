@@ -143,25 +143,54 @@
                 <ros_publisher topic="/${robot_name}/multibeam_sonar/stonefish/data"/>
             </sensor>
 
-            <!-- <sensor name="laserscanner_1" rate="10" type="multibeam">
-                <specs fov="45" steps="128"/>
+            <sensor name="laserscanner_1" rate="10" type="multibeam">
+                <specs fov="45" steps="64"/>
                 <range distance_min="0.5" distance_max="100.0"/>
                 <noise distance="0.1"/>
                 <history samples="1"/>
-                <origin xyz="0.0 0.0 -1" rpy="0 0 1.57"/>
+                <origin xyz="0.0 0.0 -0.6" rpy="3.14 0 -4.712389"/>
                 <link name="Base"/>
                 <ros_publisher topic="/${robot_name}/laserscanner_1/stonefish/data"/>
-            </sensor> -->
+            </sensor>
 
-            <sensor name="laserscanner_2" rate="10" type="multibeam">
-                <specs fov="45" steps="128"/>
+            <sensor name="laserscanner_3" rate="10" type="multibeam">
+                <specs fov="45" steps="64"/>
                 <range distance_min="0.5" distance_max="100.0"/>
-                <!-- <noise distance="0.1"/> -->
-                <noise distance="0.0"/>
+                <noise distance="0.1"/>
                 <history samples="1"/>
-                <origin xyz="0.0 0.0 -5" rpy="3.14 0 -4.712389"/>
+                <origin xyz="0.0 0.0 -0.6" rpy="3.14 0.08726646 -4.712389"/>
                 <link name="Base"/>
-                <ros_publisher topic="/${robot_name}/laserscanner_2/stonefish/data"/>
+                <ros_publisher topic="/${robot_name}/laserscanner_3/stonefish/data"/>
+            </sensor>
+            
+            <sensor name="laserscanner_5" rate="1" type="multibeam">
+                <specs fov="45" steps="64"/>
+                <range distance_min="0.5" distance_max="100.0"/>
+                <noise distance="0.1"/>
+                <history samples="1"/>
+                <origin xyz="0.0 0.0 -0.6" rpy="3.14 0.1745329 -4.712389"/>
+                <link name="Base"/>
+                <ros_publisher topic="/${robot_name}/laserscanner_5/stonefish/data"/>
+            </sensor>
+
+            <sensor name="laserscanner_7" rate="1" type="multibeam">
+                <specs fov="45" steps="64"/>
+                <range distance_min="0.5" distance_max="100.0"/>
+                <noise distance="0.1"/>
+                <history samples="1"/>
+                <origin xyz="0.0 0.0 -0.6" rpy="3.14 0.2617994 -4.712389"/>
+                <link name="Base"/>
+                <ros_publisher topic="/${robot_name}/laserscanner_7/stonefish/data"/>
+            </sensor>
+
+            <sensor name="laserscanner_9" rate="1" type="multibeam">
+                <specs fov="45" steps="64"/>
+                <range distance_min="0.5" distance_max="100.0"/>
+                <noise distance="0.1"/>
+                <history samples="1"/>
+                <origin xyz="0.0 0.0 -0.6" rpy="3.14 0.3490659 -4.712389"/>
+                <link name="Base"/>
+                <ros_publisher topic="/${robot_name}/laserscanner_9/stonefish/data"/>
             </sensor>
 
             <sensor name="imu" type="imu" rate="20.0">

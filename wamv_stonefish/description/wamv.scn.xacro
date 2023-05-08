@@ -211,6 +211,16 @@
                 <ros_publisher topic="/${robot_name}/gps/fix"/>
             </sensor>
 
+            <sensor name="MSIS" type="msis">
+                <specs step="0.25" bins="500" horizontal_beam_width="2.0" vertical_beam_width="30.0"/>
+                <settings range_min="0.5" range_max="10.0" rotation_min="-50.0" rotation_max="50.0" gain="1.5"/>
+                <noise multiplicative="0.02" additive="0.03"/>
+                <display colormap="hot"/>
+                <origin xyz="0.0 0.0 0.0" rpy="-1.57 3.14 4.71"/>
+                <ros_publisher topic="/${robot_name}/msis/stonefish/data"/>
+                <link name="Base"/>
+            </sensor>
+
             <world_transform rpy="${rpy}" xyz="${xyz}"/>
 
         </robot>

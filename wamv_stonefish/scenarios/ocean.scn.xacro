@@ -17,7 +17,7 @@
     <xacro:wamv robot_name="$(arg robot_name)" xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 
     <environment>
-        <ned latitude="41" longitude="-71"/>
+        <ned latitude="41.491952" longitude="-71.418078"/>
         <ocean>
             <water density="1031.0" jerlov="0.2"/>
             <waves height="0.0"/>

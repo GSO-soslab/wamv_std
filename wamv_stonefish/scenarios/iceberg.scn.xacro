@@ -24,7 +24,7 @@
         <material name="Ice"/>
         <look name="ice"/>
         <cg xyz=" 0.0 0 0.0" rpy="0.0 0.0 0.0"/>
-        <world_transform xyz="100.0 100.0 0.0" rpy="3.1415926 0.0 0.0"/>
+        <world_transform xyz="55.0 55.0 0.0" rpy="3.1415926 0.0 0.0"/>
     </static>
 
     <!-- <animated name="AnimMesh" type="model" collisions="true">

@@ -18,7 +18,7 @@ zero_altitude: true
 
 ## If you want to set a datum uncomment the following
 wait_for_datum: true
-datum: [41.0, -71.0000, 0.0, odom, base_link]
+datum: [41.491952, -71.418078, 0.0, odom, base_link]
 
 # broadcast_cartesian_transform_as_parent_frame: false
 

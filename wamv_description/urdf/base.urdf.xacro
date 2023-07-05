@@ -6,7 +6,7 @@
         <visual>
             <origin xyz="0.0 -0 -0" rpy="0.0 0.0 0"/>
             <geometry>
-                <mesh filename="package://wamv_description/mesh/wamv_base.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="package://wamv_description/mesh/wamv_base.obj" scale="0.0045 0.0045 0.0045"/>
             </geometry>
         </visual>
     </link>
@@ -20,42 +20,42 @@
    
     <link name="multibeam"/>
     <joint name="multibeam_joint" type="fixed">
-        <origin xyz="0.0 0.0 -0.1" rpy="-1.57 .785 -1.57"/>
+        <origin xyz="0.0 0.0 -0.5" rpy="-1.57 .785 -1.57"/>
         <parent link="base_link"/>
         <child link="multibeam"/>
     </joint>
 
     <link name="laserscanner_1"/>
     <joint name="laserscanner_1_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.1" rpy="0 -0.0 4.712389"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0 -0.0 4.712389"/>
         <parent link="base_link"/>
         <child link="laserscanner_1"/>
     </joint>
 
     <link name="laserscanner_3"/>
     <joint name="laserscanner_3_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.1" rpy="0 -0.08726646 4.712389"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0 -0.08726646 4.712389"/>
         <parent link="base_link"/>
         <child link="laserscanner_3"/>
     </joint>
     
     <link name="laserscanner_5"/>
     <joint name="laserscanner_5_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.1" rpy="0 -0.1745329 4.712389"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0 -0.1745329 4.712389"/>
         <parent link="base_link"/>
         <child link="laserscanner_5"/>
     </joint>
 
     <link name="laserscanner_7"/>
     <joint name="laserscanner_7_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.1" rpy="0 -0.2617994 4.712389"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0 -0.2617994 4.712389"/>
         <parent link="base_link"/>
         <child link="laserscanner_7"/>
     </joint>
 
     <link name="laserscanner_9"/>
     <joint name="laserscanner_9_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.1" rpy="0 -0.3490659 4.712389"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0 -0.3490659 4.712389"/>
         <parent link="base_link"/>
         <child link="laserscanner_9"/>
     </joint>
@@ -77,9 +77,23 @@
 
     <link name="msis"/>
     <joint name="msis_joint" type="fixed">
-        <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
+        <origin xyz="0.0 0.0 0.5" rpy="0 0 0"/>
         <parent link="base_link"/>
         <child link="msis"/>
+    </joint>
+
+    <link name="thruster_starboard_link"/>
+    <joint name="thruster_starboard_joint" type="fixed">
+        <origin rpy="0 0 0" xyz="-1 -.45 -.2"/>
+        <parent link="base_link"/>
+        <child link="thruster_starboard_link"/>
+    </joint>
+
+    <link name="thruster_port_link"/>
+    <joint name="thruster_port_joint" type="fixed">
+        <origin rpy="0 0 0" xyz="-1 .45 -.2"/>
+        <parent link="base_link"/>
+        <child link="thruster_port_link"/>
     </joint>
 
 

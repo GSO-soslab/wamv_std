@@ -28,8 +28,8 @@
         <!--[Test] Teleop-->
     <node type="joy_node" name="joy_node" pkg="joy"/>
 
-    <node name="teleop_to_thrust"
+    <node name="teleop_to_thrust_wamv"
             pkg ="wamv_bringup"
-            type="teleop.py"
+            type="teleop_wamv.py"
             output="screen"/>
 </launch>

@@ -74,24 +74,24 @@
         <parent link="base_link"/>
         <child link="gps"/>
     </joint>
-
+<!-- 
     <link name="msis"/>
     <joint name="msis_joint" type="fixed">
         <origin xyz="0.0 0.0 0.5" rpy="0 0 0"/>
         <parent link="base_link"/>
         <child link="msis"/>
-    </joint>
+    </joint> -->
 
     <link name="thruster_starboard_link"/>
     <joint name="thruster_starboard_joint" type="fixed">
-        <origin rpy="0 0 0" xyz="-1 -.45 -.2"/>
+        <origin rpy="3.14 0 0" xyz="-1 -.45 -.2"/>
         <parent link="base_link"/>
         <child link="thruster_starboard_link"/>
     </joint>
 
     <link name="thruster_port_link"/>
     <joint name="thruster_port_joint" type="fixed">
-        <origin rpy="0 0 0" xyz="-1 .45 -.2"/>
+        <origin rpy="3.14 0 0" xyz="-1 .45 -.2"/>
         <parent link="base_link"/>
         <child link="thruster_port_link"/>
     </joint>

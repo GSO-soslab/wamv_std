@@ -6,7 +6,7 @@ from sensor_msgs.msg import Joy
 
 class Move:
     def __init__(self) -> None:
-        self.sub_cmd_joy = rospy.Subscriber("/joy",Joy, self.joy_to_cmd_vel)
+        self.sub_cmd_joy = rospy.Subscriber("/joy/wamv",Joy, self.joy_to_cmd_vel)
         self.pub_joy_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
         self.sub_cmd_vel = rospy.Subscriber("/cmd_vel", Twist, self.propel)
         

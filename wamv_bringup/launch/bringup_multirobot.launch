@@ -26,7 +26,10 @@
     </include>
 
         <!--[Test] Teleop-->
-    <node type="joy_node" name="joy_node" pkg="joy"/>
+    <node type="joy_node" name="joy_node" pkg="joy">
+       <param name="dev" value= "/dev/input/js0"/>
+       <remap from="/joy" to="/joy/wamv"/>
+    </node>
 
     <node name="teleop_to_thrust_wamv"
             pkg ="wamv_bringup"

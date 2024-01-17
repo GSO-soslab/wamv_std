@@ -20,12 +20,7 @@
     <!-- load preconfigured rviz -->
     <node type="rviz" name="rviz_wamv" pkg="rviz" args="-d $(find wamv_bringup)/rviz/config.rviz" />
 
-    <!-- bring up the helm -->
-    <include file="$(find alpha_std_bringup)/launch/bringup_helm.launch">
-        <arg name="robot_name" value="$(arg robot_name)"/>
-    </include>
-
-        <!--[Test] Teleop-->
+    <!--[Test] Teleop-->
     <node type="joy_node" name="joy_node" pkg="joy">
        <param name="dev" value= "/dev/input/js0"/>
        <remap from="/joy" to="/joy/wamv"/>

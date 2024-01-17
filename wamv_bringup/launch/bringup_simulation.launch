@@ -47,16 +47,15 @@
     </include>
 
     <!--[Test] Teleop-->
-    <node type="joy_node" name="joy_node" pkg="joy"/>
+    <node type="joy_node" name="joy_node" pkg="joy">
+       <param name="dev" value= "/dev/input/js0"/>
+       <remap from="/joy" to="/joy/wamv"/>
+    </node>
 
     <node name="teleop_to_thrust_wamv"
             pkg ="wamv_bringup"
             type="teleop_wamv.py"
             output="screen"/>
 
-    <!-- <node pkg="gmapping" type="slam_gmapping" name="gmapping_thing" output="screen" >
-    <remap from="scan" to="/wamv/laserscanner_2/stonefish/data" />
-    <param name="odom_frame" value="/wamv/odom" />
-    <param name="base_frame" value="/wamv/base_link" />
-    </node> -->
+
 </launch>

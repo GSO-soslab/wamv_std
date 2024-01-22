@@ -2,8 +2,6 @@
 
 helm_configuration:
   frequency: 10.0
-  global_link: world_ned
-  local_link: cg_link
 
 finite_state_machine:
   - name: start
@@ -42,6 +40,18 @@ behaviors:
     plugin: helm::PathFollowingI
     states:
       - { name: survey_global, priority: 1 }
+
+  - name: depth_tracking
+    plugin: helm::DepthTracking
+    states:
+      - { name: survey_local, priority: 1 }
+      - { name: survey_global, priority: 1 }
+
+  - name: periodic_surfacing
+    plugin: helm::PeriodicSurface
+    states:
+      - {name: survey_local, priority: 2}
+      - {name: survey_global, priority: 2}
 
   - name: gps_wpt
     plugin: helm::GpsWaypoint

@@ -42,7 +42,7 @@
     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find wamv_bringup)/rviz/config.rviz" />
 
     <!-- bring up the helm -->
-    <include file="$(find alpha_std_bringup)/launch/bringup_helm.launch">
+    <include file="$(find wamv_bringup)/launch/bringup_helm.launch">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 

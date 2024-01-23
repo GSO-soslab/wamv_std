@@ -11,7 +11,6 @@
 # UTM Zone: 19
 # North up.
 
-acceptance_radius: 3.0
 update_topic: update_waypoints
 append_topic: append_waypoints
 surge_velocity: 0.80
@@ -22,3 +21,5 @@ state_fail: kill
 beta_gain: 1.0 
 #integral term.
 sigma: 0.5
+overshoot_timeout: 600 # not sure what to set this to
+acceptance_radius: 3.0

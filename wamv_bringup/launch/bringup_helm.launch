@@ -33,12 +33,20 @@
 
         <!-- load path following related param -->
         <!-- following local path  -->
-        <rosparam command="load" ns="path_local" file="$(find wamv_config)/mission/param/path_local.yaml"/>
-        <param name="path_local/frame_id" value="$(arg robot_name)/odom"/>
+        <!-- <rosparam command="load" ns="path_local" file="$(find wamv_config)/mission/param/path_local.yaml"/> -->
+        <!-- <param name="path_local/frame_id" value="$(arg robot_name)/odom"/> -->
         
         <!-- following a path defined by gps coordinate -->
-        <rosparam command="load" ns="path_global" file="$(find wamv_config)/mission/param/path_global.yaml"/>
-        <param name="path_global/frame_id" value="$(arg robot_name)/odom"/>
+        <!-- <rosparam command="load" ns="path_global" file="$(find wamv_config)/mission/param/path_global.yaml"/> -->
+        <!-- <param name="path_global/frame_id" value="$(arg robot_name)/odom"/> -->
+
+        <!-- following a path defined by gps coordinates -->
+        <rosparam command="load" ns="path_3d" file="$(find wamv_config)/mission/param/path_3d.yaml"/>
+        <param name="path_3d/frame_id" value="$(arg robot_name)/world"/>
+        <param name="path_3d/enu_frame" value="$(arg robot_name)/world"/>
+        <param name="path_3d/waypoint_path" value="$(find wamv_config)/mission/param/go_to_list/"/>
+        <!-- robot localization local to lat lon service name  -->
+        <param name="path_3d/toll_service" value="/$(arg robot_name)/toLL"/>
 
         <!-- gps_wpt behavior will convert gps coordinate (using fromLL service) into local coordinate and publish to the topic-->
         <rosparam command="load" ns="gps_wpt" file="$(find wamv_config)/mission/param/gps_wpt.yaml"/>

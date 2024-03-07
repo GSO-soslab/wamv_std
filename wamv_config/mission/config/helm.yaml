@@ -11,6 +11,8 @@ finite_state_machine:
     initial: true
     transitions:
       - survey_3d
+      - teleop_dof
+      - teleop_xy
       - kill
 
   - name: survey_3d
@@ -24,8 +26,14 @@ finite_state_machine:
     transition:
       - start
 
-  - name: direct_control
+  - name: teleop_dof
     mode: hold_dof
+    transitions:
+      - start
+      - kill
+
+  - name: teleop_xy
+    mode: hold_xy
     transitions:
       - start
       - kill
@@ -36,12 +44,13 @@ behaviors:
     states:
       - { name: survey_3d, priority: 1 }
 
-  - name: gps_wpt
-    plugin: helm::GpsWaypoint
-    states:
-      - { name: survey_3d, priority: 1 }
+  # - name: gps_wpt
+  #   plugin: helm::GpsWaypoint
+  #   states:
+  #     - { name: survey_3d, priority: 1 }
 
   - name: direct_control
     plugin: helm::DirectControlCont
     states:
-      - { name: direct_control, priority: 1 }
+      - { name: teleop_xy, priority: 1 }
+      - { name: teleop_dof, priority: 1}

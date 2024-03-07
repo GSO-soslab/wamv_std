@@ -46,16 +46,20 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 
-    <!--[Test] Teleop-->
+    <include file="$(find wamv_bringup)/launch/include/joystick.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include>
+
+    <!-- [Test] Teleop-->
     <node type="joy_node" name="joy_node" pkg="joy">
        <param name="dev" value= "/dev/input/js0"/>
        <remap from="/joy" to="/joy/wamv"/>
     </node>
 
-    <node name="teleop_to_thrust_wamv"
+    <!-- <node name="teleop_to_thrust_wamv"
             pkg ="wamv_bringup"
             type="teleop_wamv.py"
-            output="screen"/>
+            output="screen"/> -->
 
 
 </launch>

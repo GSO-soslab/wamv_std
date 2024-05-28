@@ -451,7 +451,7 @@ Visualization Manager:
       Value: false
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /wamv/helm/path_global/path
+      Marker Topic: /wamv/helm/path_3d/path
       Name: Marker
       Namespaces:
         {}
@@ -459,7 +459,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /wamv/helm/path_global/segment
+      Marker Topic: /wamv/helm/path_3d/segment
       Name: Marker
       Namespaces:
         {}

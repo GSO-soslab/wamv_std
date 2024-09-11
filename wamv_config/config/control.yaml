@@ -14,8 +14,8 @@ control_modes:
   idle: false
 
   flight:
-    surge:    {p: 33.0,    i: 0.03,  d: 7.0,   i_max: 30, i_min: -30}
-    yaw:      {p: 27.0,    i: 0.9,   d: 30.0,  i_max: 30, i_min: -30}
+    surge:    {p: 300.0,    i: 0.8,  d: 20.0,   i_max: 30, i_min: -30} # prev: 33, 0.03, 7.0 | 30/-30
+    yaw:      {p: 572.0,    i: 1.0,   d: 30.0,  i_max: 30, i_min: -30} # prev: 27, 0.9, 30.0
   
   hold_xy:
     x:        {p: 2.5,    i: 1.0,   d: 5.0,   i_max: 10, i_min: -10}

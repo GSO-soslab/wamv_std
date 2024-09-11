@@ -50,6 +50,8 @@
 
         <rosparam command="load" ns="direct_control" file="$(find wamv_config)/mission/param/direct_control.yaml"/>
 
+        <!-- <rosparam command="load" ns="follow_rise" file="$(find wamv_config)/mission/param/follow_rise.yaml"/> -->
+
         <!-- gps_wpt behavior will convert gps coordinate (using fromLL service) into local coordinate and publish to the topic-->
         <!-- <rosparam command="load" ns="gps_wpt" file="$(find wamv_config)/mission/param/gps_wpt.yaml"/>
         <param name="gps_wpt/target_frame_id" value="$(arg robot_name)/odom"/>

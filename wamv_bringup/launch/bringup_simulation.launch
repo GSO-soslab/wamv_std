@@ -46,15 +46,15 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 
-    <include file="$(find wamv_bringup)/launch/include/joystick.launch.xml">
+    <!-- <include file="$(find wamv_bringup)/launch/include/joystick.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include>
+    </include> -->
 
     <!-- [Test] Teleop-->
-    <node type="joy_node" name="joy_node" pkg="joy">
+    <!-- <node type="joy_node" name="joy_node" pkg="joy">
        <param name="dev" value= "/dev/input/js0"/>
        <remap from="/joy" to="/joy/wamv"/>
-    </node>
+    </node> -->
 
     <!-- <node name="teleop_to_thrust_wamv"
             pkg ="wamv_bringup"

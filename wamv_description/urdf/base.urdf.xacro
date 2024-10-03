@@ -25,7 +25,7 @@
         <child link="multibeam"/>
     </joint>
 
-    <!-- <link name="laserscanner_1"/>
+    <link name="laserscanner_1"/>
     <joint name="laserscanner_1_joint" type="fixed">
         <origin xyz="0.0 0.0 0.5" rpy="0 -0.0 4.712389"/>
         <parent link="base_link"/>
@@ -58,7 +58,14 @@
         <origin xyz="0.0 0.0 0.5" rpy="0 -0.3490659 4.712389"/>
         <parent link="base_link"/>
         <child link="laserscanner_9"/>
-    </joint> -->
+    </joint>
+
+    <link name="vlp16"/>
+    <joint name="vlp16_joint" type="fixed">
+        <origin xyz="0.00 0.00 1.0" rpy="3.14159 0.00 0.00"/>
+        <parent link="base_link"/>
+        <child link="vlp16"/>
+    </joint>
 
     <link name="imu"/>
     <joint name="imu_joint" type="fixed">
@@ -76,7 +83,7 @@
     
     <link name="gps"/>
     <joint name="gps_joint" type="fixed">
-        <origin xyz="-0.7 0.0 0.3" rpy="3.1415926 0.0 0.0"/>
+        <origin xyz="0.0 0.0 0.3" rpy="3.1415926 0.0 0.0"/>
         <parent link="base_link"/>
         <child link="gps"/>
     </joint>

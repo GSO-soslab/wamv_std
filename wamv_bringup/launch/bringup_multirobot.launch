@@ -35,6 +35,11 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 
+    <!-- bring up the path planner -->
+    <include file="$(find wamv_path_planner)/launch/wamv_planner.launch">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include>
+
     <!-- <include file="$(find wamv_bringup)/launch/include/joystick.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include> -->
